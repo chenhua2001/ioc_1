@@ -9,7 +9,7 @@ public class CglibInstantiationStrategy implements InstantiationStrategy{
     @Override
     public Object instantiate(BeanDefinition beanDefinition, String name, Object[] args) throws BeanException {
         Enhancer enhancer=new Enhancer();
-        enhancer.setSuperclass(beanDefinition.getBeanClass());
+        enhancer.setSuperclass(beanDefinition.beanClass());
         if(args==null||args.length==0)
             return enhancer.create();
         else return enhancer.create(ClassesTypeUtil.getClassesType(args),args);

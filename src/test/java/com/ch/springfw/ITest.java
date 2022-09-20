@@ -1,6 +1,7 @@
 package com.ch.springfw;
 
 
+import com.ch.springfw.bean.UserDao;
 import com.ch.springfw.bean.UserService;
 import com.ch.springfw.expection.BeanException;
 import com.ch.springfw.factory.BeanFactory;
@@ -37,7 +38,7 @@ public class ITest {
         }
 
     }
-    /*无参获取bean
+    /*带参获取bean
      * from:版本3
      */
     @Test
@@ -55,5 +56,20 @@ public class ITest {
         }
 
     }
-    
+
+    /*
+    * 测试自动装配UserDao
+    * */
+    @Test
+    public void testAutoWireBean() throws BeanException {
+        DefaultListableBeanFactory defaultListableBeanFactory=new DefaultListableBeanFactory();
+        PropertyValues propertyValues=new PropertyValues();
+        propertyValues.addProperty(new PropertyValue("name","chenhua"));
+        defaultListableBeanFactory.addBeanDefinitionRegistry("userDao",new BeanDefinition(UserDao.class,propertyValues));
+        PropertyValues propertyValues1=new PropertyValues();
+        propertyValues1.addProperty(new PropertyValue("userDao",new BeanReference("userDao")));
+        defaultListableBeanFactory.addBeanDefinitionRegistry("userService",new BeanDefinition(UserService.class,propertyValues1));
+        UserService userService = (UserService)defaultListableBeanFactory.getBean("userService");
+        userService.getUserByDao();
+    }
 }

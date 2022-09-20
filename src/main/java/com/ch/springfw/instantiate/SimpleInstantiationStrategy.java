@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class SimpleInstantiationStrategy implements InstantiationStrategy{
     @Override
     public Object instantiate(BeanDefinition beanDefinition, String name, Object[] args) throws BeanException {
-        Class beanClass = beanDefinition.getBeanClass();
+        Class beanClass = beanDefinition.beanClass();
         Constructor declaredConstructor;
         Class[] argTypes;
         if(args!=null&&args.length>0){

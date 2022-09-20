@@ -2,14 +2,36 @@ package com.ch.springfw;
 
 public class BeanDefinition {
     private Class beanClass;
+    private PropertyValues propertyValues;
+
     public BeanDefinition(Class _beanClass){
-        beanClass=_beanClass;
+        this(_beanClass,null);
     }
-    public Class getBeanClass(){
+
+    public BeanDefinition(Class beanClass, PropertyValues propertyValues) {
+        this.beanClass = beanClass;
+        this.propertyValues = propertyValues==null?new PropertyValues()
+        :propertyValues;
+    }
+    public BeanDefinition beanClass(Class beanClass) {
+        this.beanClass=beanClass;
+        return this;
+    }
+
+
+
+    public Class beanClass(){
         return beanClass;
     }
 
-    public void setBeanClass(Class beanClass) {
-        this.beanClass = beanClass;
+
+
+    public PropertyValues propertyValues() {
+        return propertyValues;
+    }
+
+    public BeanDefinition propertyValues(PropertyValues propertyValues) {
+        this.propertyValues = propertyValues;
+        return this;
     }
 }
