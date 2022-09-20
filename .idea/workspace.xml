@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad81a799-f48a-4859-baad-6a2fc86dacf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/expection/BeanException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractBeanFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/BeanFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/DefaultListableBeanFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/rigister/BeanDefinitionRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/single/DefaultSingletonBeanFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/single/SingletonBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/BeanDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/BeanFactory.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/instantiate/CglibInstantiationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/instantiate/InstantiationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/instantiate/SimpleInstantiationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/util/ClassesTypeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/expection/BeanException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/expection/BeanException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/BeanFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ch/springfw/ITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/ITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ch/springfw/bean/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/bean/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,14 +74,16 @@
       <recent name="D:\learning\spring\ioc_1.0.0\src\main\java\com\ch\springfw" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ITest.testGetBeanObjectWithArgs">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -103,8 +104,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ITest.testGetBeanObjectWithArgs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ioc_1.0.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ch.springfw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ch.springfw" />
+      <option name="MAIN_CLASS_NAME" value="com.ch.springfw.ITest" />
+      <option name="METHOD_NAME" value="testGetBeanObjectWithArgs" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ITest.testGetBeanObjectWithArgs" />
         <item itemvalue="JUnit.ITest.testGetBeanObject" />
       </list>
     </recent_temporary>
@@ -117,7 +135,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663658719168</updated>
-      <workItem from="1663658720380" duration="5895000" />
+      <workItem from="1663658720380" duration="8163000" />
+      <workItem from="1663674272416" duration="1213000" />
     </task>
     <servers />
   </component>

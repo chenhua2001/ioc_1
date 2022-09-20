@@ -19,9 +19,14 @@ public class ITest {
         service.getUser();
 
     }*/
+    /*无参获取bean
+    * from:版本3
+    */
     @Test
     public void testGetBeanObject() {
+        //beanFactory初始化
         final DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
+        //添加beanDefinition
         beanFactory.addBeanDefinitionRegistry("userService",new BeanDefinition(UserService.class));
         UserService service;
         try{
@@ -32,4 +37,23 @@ public class ITest {
         }
 
     }
+    /*无参获取bean
+     * from:版本3
+     */
+    @Test
+    public void testGetBeanObjectWithArgs() {
+        //beanFactory初始化
+        final DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
+        //添加beanDefinition
+        beanFactory.addBeanDefinitionRegistry("userService",new BeanDefinition(UserService.class));
+        UserService service;
+        try{
+            service = (UserService) beanFactory.getBean("userService",new Object[]{"chenhhhh"});
+            service.getUser();
+        }catch (BeanException e){
+            e.printStackTrace();
+        }
+
+    }
+    
 }
