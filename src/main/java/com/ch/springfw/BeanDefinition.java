@@ -1,11 +1,15 @@
 package com.ch.springfw;
 
 public class BeanDefinition {
-    private Object bean;
-    public BeanDefinition(Object _bean){
-        bean=_bean;
+    private Class beanClass;
+    public BeanDefinition(Class _beanClass){
+        beanClass=_beanClass;
     }
-    public Object getBean(){
-        return bean;
+    public Class getBeanClass(){
+        return beanClass;
+    }
+
+    public void setBeanClass(Class beanClass) {
+        this.beanClass = beanClass;
     }
 }
