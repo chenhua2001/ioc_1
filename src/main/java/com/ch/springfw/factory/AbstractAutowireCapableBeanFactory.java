@@ -41,7 +41,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
             try {
                 BeanUtil.setBeanProperty(b,name,value);
             } catch (IllegalAccessException | NoSuchFieldException e) {
-                throw new BeanException("set property "+name+" fail in bean "+beanName);
+                throw new BeanException("set property ["+name+"] fail in bean "+beanName);
             }
         }
     }

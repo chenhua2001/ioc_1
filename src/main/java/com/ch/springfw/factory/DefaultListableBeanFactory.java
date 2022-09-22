@@ -24,4 +24,9 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
     public void addBeanDefinitionRegistry(String name, BeanDefinition beanDefinition) {
         definitionHashMap.put(name,beanDefinition);
     }
+
+    @Override
+    public boolean containsBeanDefinition(String name) {
+        return definitionHashMap.containsKey(name);
+    }
 }

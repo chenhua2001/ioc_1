@@ -2,7 +2,7 @@ package com.ch.springfw.factory;
 
 import com.ch.springfw.BeanDefinition;
 import com.ch.springfw.expection.BeanException;
-import com.ch.springfw.single.DefaultSingletonBeanFactory;
+import com.ch.springfw.factory.single.DefaultSingletonBeanFactory;
 
 public abstract class AbstractBeanFactory extends DefaultSingletonBeanFactory implements BeanFactory {
 

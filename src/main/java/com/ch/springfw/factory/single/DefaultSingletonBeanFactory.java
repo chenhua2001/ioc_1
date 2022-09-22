@@ -1,4 +1,4 @@
-package com.ch.springfw.single;
+package com.ch.springfw.factory.single;
 
 import java.util.HashMap;
 import java.util.Map;
