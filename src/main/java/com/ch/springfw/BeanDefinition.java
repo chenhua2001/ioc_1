@@ -33,5 +33,19 @@ public class BeanDefinition {
         return this;
     }
 
+    public String initMethodName() {
+        return initMethodName;
+    }
 
+    public void setInitMethodName(String initMethodName) {
+        this.initMethodName = initMethodName;
+    }
+
+    public String destroyMethodName() {
+        return destroyMethodName;
+    }
+
+    public void setDestroyMethodName(String destroyMethodName) {
+        this.destroyMethodName = destroyMethodName;
+    }
 }

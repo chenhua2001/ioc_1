@@ -6,8 +6,9 @@ import com.ch.springfw.processor.BeanPostProcessor;
 
 import java.util.List;
 
-public interface ConfigurableListableBeanFactory extends ListableBeanFactory{
+public interface ConfigurableListableBeanFactory extends ListableBeanFactory,ConfigurableFactory {
     BeanDefinition getBeanDefinition(String beanName) throws BeanException;
     void preInstantiateSingletons() throws BeanException;
     void addBeanPostProcessor(BeanPostProcessor beanPostProcessor);
+
 }

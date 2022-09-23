@@ -4,6 +4,7 @@ import com.ch.springfw.BeanDefinition;
 import com.ch.springfw.expection.BeanException;
 import com.ch.springfw.processor.BeanPostProcessor;
 import com.ch.springfw.rigister.BeanDefinitionRegistry;
+import com.ch.springfw.support.DisposableBeanAdapter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -58,4 +59,6 @@ public  class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFact
     public String[] getBeanDefinitionNames() {
         return new String[0];
     }
+
+
 }

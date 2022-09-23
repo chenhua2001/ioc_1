@@ -1,5 +1,6 @@
 package com.ch.springfw.factory;
 
+import com.ch.springfw.expection.BeanException;
 import com.ch.springfw.factory.single.SingletonBeanFactory;
 import com.ch.springfw.processor.BeanPostProcessor;
 
@@ -12,4 +13,6 @@ public interface ConfigurableFactory extends HierarchicalBeanFactory, SingletonB
 
     void addBeanPostProcessor(BeanPostProcessor beanPostProcessor);
     List<BeanPostProcessor> getBeanPostProcessor();
+
+    void destroySingleton() throws BeanException;
 }

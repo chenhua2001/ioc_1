@@ -5,10 +5,11 @@
         <property name="name" value="hahahadao"/>
     </bean>
 
-    <bean id="userService" class="com.ch.springfw.bean.UserService">
+    <bean id="userService" class="com.ch.springfw.bean.UserService" init-method="sayHello" destroy-method="sayBye">
         <property name="name" value="hahaha"/>
         <property name="userDao" ref="userDao"/>
     </bean>
     <bean id="myBeanFactoryPostProcessor" class="com.ch.springfw.process.MyBeanFactoryPostProcessor"/>
     <bean id="myPostProcessor" class="com.ch.springfw.process.MyPostProcessor"/>
+
 </beans>

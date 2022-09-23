@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="userDao" class="com.ch.springfw.bean.UserDao">
+        <property name="name" value="hahahadao"/>
+    </bean>
+
+    <bean id="userService" class="com.ch.springfw.bean.UserService">
+        <property name="name" value="hahaha"/>
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+</beans>

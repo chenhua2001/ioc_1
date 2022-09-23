@@ -1,4 +1,4 @@
-package com.ch.springfw.factory;
+package com.ch.springfw.processor;
 
 public interface InitializingBean {
     void afterPropertiesSet() throws Exception;
