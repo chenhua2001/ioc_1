@@ -3,6 +3,8 @@ package com.ch.springfw;
 public class BeanDefinition {
     private Class beanClass;
     private PropertyValues propertyValues;
+    private String initMethodName;
+    private String destroyMethodName;
 
     public BeanDefinition(Class _beanClass){
         this(_beanClass,null);
@@ -18,13 +20,9 @@ public class BeanDefinition {
         return this;
     }
 
-
-
     public Class beanClass(){
         return beanClass;
     }
-
-
 
     public PropertyValues propertyValues() {
         return propertyValues;
@@ -34,4 +32,6 @@ public class BeanDefinition {
         this.propertyValues = propertyValues;
         return this;
     }
+
+
 }

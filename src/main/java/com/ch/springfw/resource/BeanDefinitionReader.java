@@ -11,4 +11,6 @@ public interface BeanDefinitionReader {
     void loadBeanDefinition(Resource resource) throws BeanException, IOException, ClassNotFoundException;
     void loadBeanDefinition(Resource... resources) throws BeanException, IOException, ClassNotFoundException;
     void loadBeanDefinition(String location) throws BeanException, IOException, ClassNotFoundException;
+    void loadBeanDefinition(String... location) throws BeanException, IOException, ClassNotFoundException;
+
 }

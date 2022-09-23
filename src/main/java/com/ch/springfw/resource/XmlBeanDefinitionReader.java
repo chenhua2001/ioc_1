@@ -44,6 +44,14 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
         loadBeanDefinition(resource);
     }
 
+    @Override
+    public void loadBeanDefinition(String... location) throws BeanException, IOException, ClassNotFoundException {
+        for (String s : location) {
+            Resource resource = getResourceLoader().getResource(s);
+            loadBeanDefinition(resource);
+        }
+    }
+
     protected void doLoadBeanDefinition(InputStream inputStream) throws ClassNotFoundException, BeanException {
         Document document = XmlUtil.readXML(inputStream);
         Element root=document.getDocumentElement();
