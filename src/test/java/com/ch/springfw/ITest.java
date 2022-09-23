@@ -121,5 +121,12 @@ public class ITest {
         userService.getUserByDao();
         classPathXmlApplicationContext.close();
     }
-
+    @Test
+    public void testAware() throws ClassNotFoundException, IOException, BeanException {
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("classpath:spring3.xml");
+        UserService userService = (UserService)classPathXmlApplicationContext.getBean("userService");
+        userService.getUserByDao();
+        System.out.println(userService);
+        classPathXmlApplicationContext.close();
+    }
 }

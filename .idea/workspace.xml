@@ -5,29 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad81a799-f48a-4859-baad-6a2fc86dacf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/support/DisposableBeanAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/BeanDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/aware/ApplicationContextAware.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/aware/Aware.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/aware/BeanClassLoaderAware.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/aware/BeanFactoryAware.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/aware/BeanNameAware.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/processor/ApplicationContextAwareProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/context/AbstractApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/context/AbstractApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/context/ConfigurableApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/context/ConfigurableApplicationContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/ConfigurableFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/ConfigurableFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/ConfigurableListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/ConfigurableListableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/DefaultListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/DefaultListableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/DisposableBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/processor/DisposableBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/InitializingBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/processor/InitializingBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/single/DefaultSingletonBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/single/DefaultSingletonBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/single/SingletonBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/single/SingletonBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/resource/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/resource/XmlBeanDefinitionReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/important.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/important.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractBeanFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ch/springfw/ITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/ITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ch/springfw/ResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/ResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ch/springfw/bean/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/bean/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ch/springfw/process/MyBeanFactoryPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/process/MyBeanFactoryPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ch/springfw/process/MyPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/process/MyPostProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,16 +75,30 @@
       <recent name="D:\learning\spring\ioc_1.0.0\src\main\java\com\ch\springfw" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ITest.testInitDestroy">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ITest.testAware">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ITest.testAware" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ioc_1.0.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ch.springfw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ch.springfw" />
+      <option name="MAIN_CLASS_NAME" value="com.ch.springfw.ITest" />
+      <option name="METHOD_NAME" value="testAware" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,29 +167,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ResourceTest.testFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ioc_1.0.0" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ch.springfw.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ch.springfw" />
-      <option name="MAIN_CLASS_NAME" value="com.ch.springfw.ResourceTest" />
-      <option name="METHOD_NAME" value="testFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ITest.testAware" />
         <item itemvalue="JUnit.ITest.testInitDestroy" />
         <item itemvalue="JUnit.ITest.test_process_with_context" />
         <item itemvalue="JUnit.ITest.test_process_without_context" />
         <item itemvalue="JUnit.ITest.testLoadResource" />
-        <item itemvalue="JUnit.ResourceTest.testFile" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +188,7 @@
       <workItem from="1663658720380" duration="8163000" />
       <workItem from="1663674272416" duration="10130000" />
       <workItem from="1663776283825" duration="32205000" />
-      <workItem from="1663901168165" duration="16975000" />
+      <workItem from="1663901168165" duration="20333000" />
     </task>
     <servers />
   </component>
@@ -222,11 +208,16 @@
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/ch/springfw/context/AbstractApplicationContext.java</url>
-          <line>29</line>
+          <line>32</line>
           <properties class="com.ch.springfw.context.AbstractApplicationContext" method="invokeBeanFactoryPostProcessors">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractAutowireCapableBeanFactory.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

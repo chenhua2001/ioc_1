@@ -2,6 +2,7 @@ package com.ch.springfw.context;
 
 import com.ch.springfw.expection.BeanException;
 import com.ch.springfw.factory.ConfigurableListableBeanFactory;
+import com.ch.springfw.processor.ApplicationContextAwareProcessor;
 import com.ch.springfw.processor.BeanFactoryPostProcessor;
 import com.ch.springfw.processor.BeanPostProcessor;
 import com.ch.springfw.resource.DefaultResourceLoader;
@@ -16,6 +17,8 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
         refreshBeanFactory();
         //2.获取BeanFactory
         ConfigurableListableBeanFactory beanFactory = getBeanFactory();
+        //在这里将ApplicationContext放到factory
+        beanFactory.addBeanPostProcessor(new ApplicationContextAwareProcessor(this));
         //3.在Bean实例化之前，执行BeanFactoryPostProcessor
         invokeBeanFactoryPostProcessors(beanFactory);
         //4.注册BeanPostProcessor

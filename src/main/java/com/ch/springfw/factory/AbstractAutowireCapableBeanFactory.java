@@ -6,6 +6,10 @@ import com.ch.springfw.BeanReference;
 import com.ch.springfw.PropertyValue;
 import com.ch.springfw.PropertyValues;
 import com.ch.springfw.expection.BeanException;
+import com.ch.springfw.factory.aware.Aware;
+import com.ch.springfw.factory.aware.BeanClassLoaderAware;
+import com.ch.springfw.factory.aware.BeanFactoryAware;
+import com.ch.springfw.factory.aware.BeanNameAware;
 import com.ch.springfw.instantiate.InstantiationStrategy;
 import com.ch.springfw.instantiate.SimpleInstantiationStrategy;
 import com.ch.springfw.processor.BeanPostProcessor;
@@ -39,6 +43,18 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
     }
 
     private Object initializeBean(String beanName, Object b, BeanDefinition beanDefinition) throws Exception {
+        //invokeAwareMethods：beanFactory，BeanClassLoader，BeanName
+        if(b instanceof Aware) {
+            if (b instanceof BeanFactoryAware) {
+                ((BeanFactoryAware) b).setBeanFactory(this);
+            }
+            if(b instanceof BeanClassLoaderAware){
+                ((BeanClassLoaderAware)b).setBeanClassLoader(getClassLoader());
+            }
+            if(b instanceof BeanNameAware)
+                ((BeanNameAware)b).setBeanName(beanName);
+        }
+        //ApplicationContext会在这边由PostProcessor处理
         Object wrappedBean=applyBeanPostProcessorsBeforeInitialization(b,beanName);
         invokeInitMethod(wrappedBean,beanName,beanDefinition);
         wrappedBean=applyBeanPostProcessorsAfterInitialization(wrappedBean,beanName);
