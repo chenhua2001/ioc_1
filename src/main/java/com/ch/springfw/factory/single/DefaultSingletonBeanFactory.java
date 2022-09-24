@@ -8,13 +8,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DefaultSingletonBeanFactory implements SingletonBeanFactory{
-
+    protected Object NULL_OBJECT;
     private Map<String,Object> singletonMap;
     private Map<String, DisposableBean> disposableBeanMap;
 
     public DefaultSingletonBeanFactory() {
         singletonMap=new HashMap<>();
         disposableBeanMap=new HashMap<>();
+        NULL_OBJECT=new Object();
     }
 
     protected void addSingleton(String beanName,Object bean){

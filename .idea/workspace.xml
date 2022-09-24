@@ -5,17 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad81a799-f48a-4859-baad-6a2fc86dacf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/aware/ApplicationContextAware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/aware/Aware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/aware/BeanClassLoaderAware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/aware/BeanFactoryAware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/aware/BeanNameAware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/processor/ApplicationContextAwareProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/context/AbstractApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/context/AbstractApplicationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/FactoryBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/support/FactoryBeanRegistrySupport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/ProxyBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/bean/IUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/bean/UserService2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/BeanDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/context/AbstractRefreshableApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/context/AbstractRefreshableApplicationContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/BeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/single/DefaultSingletonBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/single/DefaultSingletonBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/resource/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/resource/XmlBeanDefinitionReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ch/springfw/util/BeanUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ch/springfw/util/BeanUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ch/springfw/ITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/ITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ch/springfw/bean/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/bean/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ch/springfw/bean/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ch/springfw/bean/UserDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +80,7 @@
       <recent name="D:\learning\spring\ioc_1.0.0\src\main\java\com\ch\springfw" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ITest.testAware">
+  <component name="RunManager" selected="JUnit.ITest.test_factory_bean">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -119,7 +124,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ITest.testLoadResource" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ITest.test_factory_bean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ioc_1.0.0" />
       <extension name="coverage">
         <pattern>
@@ -129,7 +134,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.ch.springfw" />
       <option name="MAIN_CLASS_NAME" value="com.ch.springfw.ITest" />
-      <option name="METHOD_NAME" value="testLoadResource" />
+      <option name="METHOD_NAME" value="test_factory_bean" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -151,7 +156,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ITest.test_process_without_context" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ITest.test_prototype" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ioc_1.0.0" />
       <extension name="coverage">
         <pattern>
@@ -161,7 +166,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.ch.springfw" />
       <option name="MAIN_CLASS_NAME" value="com.ch.springfw.ITest" />
-      <option name="METHOD_NAME" value="test_process_without_context" />
+      <option name="METHOD_NAME" value="test_prototype" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ITest.test_factory_bean" />
+        <item itemvalue="JUnit.ITest.test_prototype" />
         <item itemvalue="JUnit.ITest.testAware" />
         <item itemvalue="JUnit.ITest.testInitDestroy" />
         <item itemvalue="JUnit.ITest.test_process_with_context" />
-        <item itemvalue="JUnit.ITest.test_process_without_context" />
-        <item itemvalue="JUnit.ITest.testLoadResource" />
       </list>
     </recent_temporary>
   </component>
@@ -189,6 +194,7 @@
       <workItem from="1663674272416" duration="10130000" />
       <workItem from="1663776283825" duration="32205000" />
       <workItem from="1663901168165" duration="20333000" />
+      <workItem from="1663933431530" duration="12235000" />
     </task>
     <servers />
   </component>
@@ -214,10 +220,23 @@
           </properties>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ch/springfw/util/BeanUtil.java</url>
+          <line>5</line>
+          <properties class="com.ch.springfw.util.BeanUtil" method="setBeanProperty">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/ch/springfw/bean/UserService2.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ch/springfw/factory/AbstractAutowireCapableBeanFactory.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="13" />
+          <line>33</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

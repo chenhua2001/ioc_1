@@ -68,6 +68,8 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
             //对init-method和destroy-method的获取
             String initMethod=bean.getAttribute("init-method");
             String destroyMethod=bean.getAttribute("destroy-method");
+            //scope
+            String beanScope=bean.getAttribute("scope");
 
             Class<?> clazz = Class.forName(className);
             String beanName=StrUtil.isNotEmpty(id)?id:name;
@@ -79,6 +81,9 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
             beanDefinition.setInitMethodName(initMethod);
             beanDefinition.setDestroyMethodName(destroyMethod);
 
+            //scope
+            if(StrUtil.isNotEmpty(beanScope))
+                beanDefinition.setScope(beanScope);
             for (int j = 0; j < bean.getChildNodes().getLength(); j++) {
                 if(!(bean.getChildNodes().item(j) instanceof Element)) continue;
                 if(!("property".equals(bean.getChildNodes().item(j).getNodeName()))) continue;

@@ -3,6 +3,7 @@ package com.ch.springfw;
 
 import com.ch.springfw.bean.UserDao;
 import com.ch.springfw.bean.UserService;
+import com.ch.springfw.bean.UserService2;
 import com.ch.springfw.context.ClassPathXmlApplicationContext;
 import com.ch.springfw.expection.BeanException;
 import com.ch.springfw.factory.BeanFactory;
@@ -129,4 +130,19 @@ public class ITest {
         System.out.println(userService);
         classPathXmlApplicationContext.close();
     }
+    @Test
+    public void test_prototype() throws ClassNotFoundException, IOException, BeanException {
+        ClassPathXmlApplicationContext applicationContext=new ClassPathXmlApplicationContext("classpath:spring4.xml");
+        UserService2 userService = applicationContext.getBean("userService", UserService2.class);
+        UserService2 userService1 = applicationContext.getBean("userService", UserService2.class);
+        System.out.println(userService1);
+        System.out.println(userService);
+    }
+    @Test
+    public void test_factory_bean() throws BeanException, IOException, ClassNotFoundException {
+        ClassPathXmlApplicationContext applicationContext=new ClassPathXmlApplicationContext("classpath:spring4.xml");
+        UserService2 userService = applicationContext.getBean("userService", UserService2.class);
+        System.out.println(userService.queryUserinfo());
+    }
+
 }

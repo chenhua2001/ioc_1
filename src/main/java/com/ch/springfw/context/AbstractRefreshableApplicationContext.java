@@ -20,4 +20,10 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
     protected ConfigurableListableBeanFactory getBeanFactory() {
         return beanFactory;
     }
+
+
+    @Override
+    public <T> T getBean(String name, Class<T> requiredType) throws BeanException {
+        return beanFactory.getBean(name,requiredType);
+    }
 }
